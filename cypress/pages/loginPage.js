@@ -1,19 +1,27 @@
 class LoginPage {
+
+  elements = {
+    txtUsername: () => cy.get('#user-name'),
+    txtPassword: () => cy.get('#password'),
+    loginButton: () => cy.get('#login-button'),
+    errorMSG: () => cy.get("h3[data-test='error']")
+
+  }
     visit() {
-      cy.visit('https://www.saucedemo.com/')
+      cy.visit('/')
     }
   
     fillLoginForm(username, password) {
-      cy.get('#user-name').type(username)
-      cy.get('#password').type(password)
+      this.elements.txtUsername().type(username)
+      this.elements.txtPassword().type(password)
     }
   
     submitLoginForm() {
-      cy.get('#login-button').click()
+      this.elements.loginButton().click()
     }
   
     getErrorMessage() {
-      return cy.get('.error-message-container')
+      return this.elements.errorMSG()
     }
   }
   
