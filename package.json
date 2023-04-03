@@ -9,6 +9,7 @@
   "author": "Nadia Koluzaeva",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^12.9.0"
+    "cypress": "^12.9.0",
+    "cypress-mochawesome-reporter": "^3.3.0"
   }
 }
