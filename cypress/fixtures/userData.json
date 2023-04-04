@@ -11,7 +11,9 @@
   "password": "secret_sauce"
 },
 
-"errorMSG": "Sorry, this user has been banned."
+"errorMSG": "Epic sadface: Sorry, this user has been locked out.",
+"logoText": "Swag Labs"
 
 }
+
 
