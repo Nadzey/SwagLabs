@@ -14,7 +14,7 @@ describe('Swag Labs Login', () => {
     loginPage.fillLoginForm(data.standardUser.username, data.standardUser.password)
     loginPage.submitLoginForm()
     cy.url().should('include', '/inventory.html')
-    inventoryPage.verifyAppLogoExists()
+    inventoryPage.elements.logo().should('be.visible').and('have.text', data.logoText)
     })
   })
 
